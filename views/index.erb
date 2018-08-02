@@ -1,0 +1,27 @@
+
+
+<html>
+  <head>
+    <style>
+      body {
+        background: SlateGray ;
+      }
+    </style>
+  </head>
+<body>
+  <h1> Hangman </h1>
+  <h2>
+    8 incorrect guesses and you lose
+  </h2>
+  <p>The word is <%= guess %> </p>
+  <!-- <p>The word is <%= session["game"].word %> </p> -->
+
+  <p>Incorrect Guesses:  <%= session["game"].show_misses%> </p>
+
+    <form action='/guess' method='post' autocomplete="off">
+      Guess a letter:
+      <input type='text' name='guess' autofocus ><br>
+      <input type='submit' value='Guess' >
+    </form>
+  </body>
+</html>
